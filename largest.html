@@ -1,0 +1,23 @@
+<html>
+<body>
+<h2>Find the Largest Number</h2>
+<p>Enter 5 numbers separated by commas:</p>
+<input type="text" id="numbers">
+<button onclick="findLargest()">Find Largest</button>
+<p id="largest"></p>
+<script>
+function findLargest() {
+  var input = document.getElementById("numbers").value;
+  var array = input.split(",");
+  var largest = -Infinity;
+  for (var i = 0; i < array.length; i++) {
+    if (array[i] > largest) {
+      largest = array[i];
+    }
+  }
+  document.getElementById("largest").innerHTML = "The largest number is: " + largest;
+}
+</script>
+
+</body>
+</html>

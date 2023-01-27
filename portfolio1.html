@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<script>
+    function exportF() {
+  //Format your table with form data
+  document.getElementById("input").innerHTML = document.getElementById("text").value;
+
+  var table = document.getElementById("table");
+  var html = table.outerHTML;
+
+  var url = 'data:application/vnd.ms-excel,' + escape(html); // Set your html table into url 
+  var link = document.getElementById("downloadLink");
+  link.setAttribute("href", url);
+  link.setAttribute("download", "export.xls"); // Choose the file name
+  link.click(); // Download your excel file   
+  return false;
+}
+</script>
+<body>
+<nav class="navbar">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#education">Education</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<section id="home">
+<h1 class ="heading">HI, I AM</h1>
+<h1 class="heading">SUMESH S PRABHU</h1><br><br>
+<p>AND THIS IS MY RESUME</P>
+</section>
+<section id="education">
+<h1 class="heading">Education</h1>
+<div class ="columns">
+<div class="box">
+<h2>Bachelors in Computer Application</h2>
+<p>I completed my BCA degree in sacred heart college, thevara in 2021 with cgpa of 7.2 .</p>
+</div>
+<div class="box">
+<h2>Masters in Computer Application</h2>
+<p>I am persuing my MCA at rajagiri college of social sciences, kalamaserry.</p>
+</div>
+</div>
+</section>
+<section id="about">
+<h1 class="heading">About Me</h1>
+<div class="about">
+<img src="sumesh1.jpg" alt="My pic">
+<div class="name">
+<h2>I'm Sumesh S Prabhu</h2><br><br>
+<p>I am Sumesh, 20 years old, persuing Mca at rajagiri college of social sciences. I was born in mattancherry and i live in mattancherry. My major intersts are on software development or testing. coding is one of my hobbies. java and c are the languages i majorly use. other hobbies are , i do painting sometimes and i love to play football</p><br>
+<p>Email: sumeshprabhu2gmail.com</p><br>
+<p>Phone: 7306218222</p><br>
+
+<a target="_blank" href="SumeshSPrabhuResume-4 (1).pdf"><input type="submit" value="RESUME" id="resume" width="50%" height="15%"></a>
+</div>
+</div>
+</section>
+<section id="contact">
+<h1 class="heading">Contact</h1>
+<form action="" class="form">
+<input type="text" name="name" class="input" placeholder="Enter your name">
+<input type="email" name="email" class="input" placeholder="enter your email">
+<textarea name="message" id="message" cols="70" rows="20" placeholder="Enter your message"></textarea>
+<input type="submit" value="submit " id="submit" onclick="alert('SUBMITTED')">
+</form>
+</section>
+</body>
+</html>

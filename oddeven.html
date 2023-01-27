@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Check Odd or Even</h2>
+
+<p id="result"></p>
+
+<script>
+for (var i = 0; i <= 15; i++) {
+  var message = i + " is ";
+  if (i % 2 == 0) {
+    message += "even";
+  } else {
+    message += "odd";
+  }
+  document.getElementById("result").innerHTML += message + "<br>";
+}
+</script>
+
+</body>
+</html>

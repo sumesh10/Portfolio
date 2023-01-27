@@ -1,0 +1,24 @@
+<html>
+<body>
+
+<h2>Sort an Array</h2>
+
+<p>Enter numbers separated by commas:</p>
+
+<input type="text" id="numbers">
+
+<button onclick="sortArray()">Sort</button>
+
+<p id="sorted"></p>
+
+<script>
+function sortArray() {
+  var input = document.getElementById("numbers").value;
+  var array = input.split(",");
+  array.sort(function(a, b){return a - b});
+  document.getElementById("sorted").innerHTML = array;
+}
+</script>
+
+</body>
+</html>
